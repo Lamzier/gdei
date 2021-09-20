@@ -1,3 +1,12 @@
+微信授权登录
+用途：获取用户信息
+前端发送至后端接口格式
+{"type":"wechatLogin","code":"$登录授权码"}
+
+后端返回前端接口格式
+{"type":"ReWechatLogin","unionID":"$用户微信原始ID","nickName":"$微信用户名"}
+
+
 这里存储的是后端与前端交互接口
 1.前端发送微信登录请求信息到后端
 {"code":"wechatLogin","username":"$微信用户名","monitor":"$安全字节码"}
