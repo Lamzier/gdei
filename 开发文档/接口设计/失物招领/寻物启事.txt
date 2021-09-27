@@ -1,0 +1,35 @@
+获取寻物启事请求
+用途：获取寻物启事
+前端发送至后端接口格式 get
+{"type":"searchNotice",
+"cookie":"$cookie",
+"inpages":"$查询的页数"
+}
+
+返回格式：
+后端返回前端接口格式
+{"type":"ReSearchNotice",
+"code":"0","msg":"操作成功",
+"cookie":"$更新cookie",
+"data":"$数组(10个数据){
+    "id_$$":"$序列号id",
+    "nickName_$$":"$序列号id",
+    "time_$$":"$序列号id",
+    "yuanxi_$$":"$序列号id",
+    "conTitle_$$":"$序列号id",
+    "conCon_$$":"$序列号id",
+    "conImage_$$":"$序列号id",
+    "conwechatId_$$":"$序列号id",
+    "avatarUrl_$$":"$头像url",
+    }"
+"pages":"$总条数",
+"inpages":"$当前页数"
+}
+
+异常返回
+{"type":"ReSearchNotice","code":"$报错代码","msg":"$原因"}
+
+
+
+
+

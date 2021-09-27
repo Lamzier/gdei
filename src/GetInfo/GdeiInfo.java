@@ -1,10 +1,9 @@
 package GetInfo;
 
+import Request.NetWorkException;
 import Request.Send;
 import net.sf.json.JSONObject;
-
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -31,7 +30,12 @@ public class GdeiInfo {
         send.setRequestProperty("Accept-Language" , "zh-CN,zh;q=0.9");
         String data =  "username=" + username +
                 "&password=" + password;
-        String text = send.doPost(data);
+        String text = null;
+        try {
+            text = send.doPost(data);
+        } catch (NetWorkException e) {
+            e.printStackTrace();
+        }
         JSONObject jsondata = JSONObject.fromObject(text);
         Map<String , Object> res = new HashMap<>();
         res.put("cookie" , send.getRequestProperty("Set-Cookie"));

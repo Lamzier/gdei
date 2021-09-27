@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="activation">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../jar包/email/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/email/mail.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/out/artifacts/gdei_war_exploded/WEB-INF/lib/src" />
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="json-lib-2.1-jdk15">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/json-lib-2.1-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/ezmorph-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/commons-beanutils-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/commons-collections-3.1.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/commons-codec-1.15-bin.zip!/commons-codec-1.15/apidocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>

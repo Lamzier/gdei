@@ -1,0 +1,18 @@
+数据库结构
+id 用户序列号 64INT
+oppenid 用户唯一标识 64String
+cookie 用户临时会话密匙 64String
+session_key 会话密匙 64String
+avatarUrl 头像URL 256String (默认 Empty)
+nickName 用户昵称 64String (默认 Empty)
+gender 性别 8String (默认 Empty)
+country 所在国家 china (默认 Empty)
+province 所在省份 guangdong (默认 Empty)
+city 所在城市 guangzhou (默认 Empty)
+language 语言 zh_CN (默认 Empty)
+phone 用户电话 32String (默认Empty)
+binding_username 广二师账号(默认Empty) 64String
+bingding_password 广二师密码(默认Empty) 64String
+updataDate 最近操作时间 64String
+registerDate 注册时间 64String
+empowerDate 微信授权时间 64String(默认Empty)

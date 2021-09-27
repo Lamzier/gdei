@@ -1,0 +1,37 @@
+目录结构预览
+gdei ==> 项目包
+ src ==> JavaBean源码包
+  Encoder ==> 编码包
+   ASE.java ==> ASE编码双向加密解密
+   Base.java ==> Base编码双向加密解密
+  FinalAll ==> 常量包
+   Final ==> 常量类
+   FinalAnnotation ==> 常量注解类
+  GetInfo ==> 获取信息包
+   GdeiInfo ==> 广二师信息获取类
+   WechatInfo ==> 微信信息获取类
+  Log ==> 日志包
+   Storage ==> 日志存储备份类
+   Tips ==> 实时日志提示类
+  Main ==> 启动包
+   start ==> 启动类
+   text ==> 测试类
+  Mysql ==> 数据库包
+   MysqlException ==> 数据库异常处理类
+   Query ==> 数据库查询类
+   Start ==> 数据库启动类
+   Update ==> 数据库操作类
+  Request ==> 请求包
+   Business ==> 业务处理类
+   cookie ==> cookie类
+   Method ==> 访问方法枚举
+   NetWorkException ==> 网络请求异常处理类
+   Receive ==> 接收请求类
+   Send ==> 发送请求类
+ .idea ==> 不重要的包,一些导入的包的和开发者信息之类的包
+ out ==> 不重要的包,编译输出包
+ web ==> web包
+  WEB-INF ==> web导入包的包
+  index.jsp ==> 主前端
+
+

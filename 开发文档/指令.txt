@@ -1,0 +1,2 @@
+./startup.sh && tail -f ../logs/catalina.out
+//启动tomcat

@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="commons-logging">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/commons-beanutils-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/ezmorph-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/BASE编码/commons-codec-1.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/json-lib-2.1-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/JSONOBJECT/commons-collections-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar包/mysql-connector-java-8.0.26.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

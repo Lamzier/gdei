@@ -1,7 +1,5 @@
 package Encoder;
 
-import org.apache.commons.codec.EncoderException;
-import org.apache.commons.codec.binary.Base32;
 import org.apache.commons.codec.binary.Base64;
 
 /**

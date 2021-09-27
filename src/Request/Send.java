@@ -1,7 +1,6 @@
 package Request;
 
 import net.sf.json.JSONObject;
-
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -11,14 +10,13 @@ import java.util.Map;
 /**
  * 处理发送HTTP请求类
  */
-public class Send {//继承HttpServlet类
+public class Send{//继承HttpServlet类
     HttpURLConnection conn = null;
     java.net.URL url = null;
 
     /**
      * 初始化参数
      * @param URL 发送的URL数据
-     * @return  成功与否
      */
     public Send(String URL){
         try {
@@ -26,8 +24,6 @@ public class Send {//继承HttpServlet类
             url = new URL(URL);
             //通过远程url连接对象打开一个连接，强转成HTTPURLConnection类
             conn = (HttpURLConnection) url.openConnection();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -58,11 +54,10 @@ public class Send {//继承HttpServlet类
      * @param JsonData 传输的json数据 String类
      * @return 返回提交值
      */
-    public String doPost(String JsonData){
+    public String doPost(String JsonData) throws NetWorkException{//会抛出网络异常错误
         OutputStreamWriter out = null;
         BufferedReader in = null;
         StringBuilder result = new StringBuilder();
-
         try{
             //处理json数据
             conn.setRequestMethod("POST");
@@ -95,7 +90,8 @@ public class Send {//继承HttpServlet类
                 System.out.println("ResponseCode is an error code:" + conn.getResponseCode());
             }
         }catch (Exception e){
-            e.printStackTrace();
+            //e.printStackTrace();
+            throw new NetWorkException("网络异常");
         }finally {
             try{
                 if(out != null){
@@ -116,9 +112,15 @@ public class Send {//继承HttpServlet类
      * @param JsonData 传输的json数据 map类
      * @return 返回提交值
      */
-    public String doPost(Map<String,String> JsonData){
+    public String doPost(Map<String,String> JsonData)throws NetWorkException{
         String json = JSONObject.fromObject(JsonData).toString();//获取json数据
-        String result = doPost(json);
+        String result = null;
+        try {
+            result = doPost(json);
+        } catch (NetWorkException e) {
+            //e.printStackTrace();
+            throw new NetWorkException("网络异常");
+        }
         return result;
     }
 
@@ -126,7 +128,7 @@ public class Send {//继承HttpServlet类
      * 发送get数据请求
      * @return 返回传输值
      */
-    public String doGet(){
+    public String doGet() throws NetWorkException{
         InputStream is = null;
         BufferedReader br = null;
         StringBuilder result = new StringBuilder();
@@ -153,11 +155,14 @@ public class Send {//继承HttpServlet类
                 System.out.println("ResponseCode is an error code:" + conn.getResponseCode());
             }
         }catch (MalformedURLException e){
-            e.printStackTrace();
+            //e.printStackTrace();
+            throw new NetWorkException("URL异常");
         }catch (IOException e){
-            e.printStackTrace();
+            //e.printStackTrace();
+            throw new NetWorkException("IOE异常");
         }catch (Exception e){
-            e.printStackTrace();
+            //e.printStackTrace();
+            throw new NetWorkException("网络异常");
         }finally {
             try{
                 if(br != null){

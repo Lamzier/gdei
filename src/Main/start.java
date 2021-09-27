@@ -1,26 +1,47 @@
 package Main;
 
-import Encoder.Base;
-import GetInfo.GdeiInfo;
-import net.sf.json.JSONObject;
-import org.apache.commons.codec.binary.Base64;
+/*
+import FinalAll.Final;
+import Mysql.MysqlException;
+import Mysql.Start;
 
-import java.util.Arrays;
-import java.util.Map;
+ */
+import Mysql.MysqlException;
+import Mysql.Start;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
 
 /**
- * 启动类
+ * tomcat启动类
  */
-public class start {
-    public static void main(String[] args) {
-        //启动函数
-        //Login login = new Login();
-        //System.out.println(login.getUserInfo("asd"));
-        Map<String , Object> map = GdeiInfo.login("liangzhanyi" , "20020614Lamzy..");
-        System.out.println(map.get("cookie"));
-        JSONObject json = (JSONObject) map.get("data");
-        System.out.println(json.get("msg"));
+public class start implements ServletContextListener {
 
-
+    /**
+     * tomcat启动时
+     * @param arg0 参数
+     */
+    @Override
+    public void contextInitialized(ServletContextEvent arg0) {
+        Log.Tips.INFO("----------------------------------------------------");
+        Log.Tips.INFO("TOMCAT服务器正在开启！");
+        try {
+            Start start = new Mysql.Start();
+        } catch (MysqlException e) {
+            e.printStackTrace();
+            //数据库启动失败!
+        }
+        Log.Tips.INFO("TOMCAT服务器已开启！");
     }
+
+    /**
+     * tomcat关闭时
+     * @param arg0 参数
+     */
+    @Override
+    public void contextDestroyed(ServletContextEvent arg0){
+        Log.Tips.INFO("TOMCAT服务器正在关闭！");
+        Log.Tips.INFO("TOMCAT服务器已关闭！");
+    }
+
 }

@@ -1,0 +1,4 @@
+//获取jdk加密文件
+keytool -genkey -alias "tomcat" -keyalg "RSA" -keystore "/usr/local/tomcat/gdei.keystore" -validity 36500
+    keystore: 520Lamzy
+

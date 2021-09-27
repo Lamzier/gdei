@@ -18,9 +18,39 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="corretto-1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 10.0.11" level="application_server_libraries" />
-    <orderEntry type="library" name="commons-beanutils-1.7.0" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../jar包/mysql-connector-java-8.0.26.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="mysql-connector-java-8.0.26" level="project" />
+    <orderEntry type="library" exported="" name="commons-codec-1.15" level="project" />
+    <orderEntry type="library" exported="" name="json-lib-2.1-jdk15" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../jar包/JSONOBJECT/commons-beanutils-1.7.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar包/JSONOBJECT/commons-collections-3.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar包/JSONOBJECT/commons-lang-2.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar包/JSONOBJECT/ezmorph-1.0.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar包/JSONOBJECT/commons-logging.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar包/JSONOBJECT/json-lib-2.1-jdk15.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jar包/BASE编码/commons-codec-1.15.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$MODULE_DIR$/../jar包/JSONOBJECT/commons-codec-1.15-bin.zip!/commons-codec-1.15/apidocs" />
+        </JAVADOC>
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="commons-logging" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.71" level="application_server_libraries" />
+    <orderEntry type="library" name="activation" level="project" />
   </component>
 </module>

@@ -1,12 +1,29 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="gdei:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/gdei_war_exploded</output-path>
-    <root id="root">
+  <artifact type="war" build-on-make="true" name="gdei:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/gdei</output-path>
+    <root id="archive" name="gdei.war">
       <element id="javaee-facet-resources" facet="gdei/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="gdei" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../jar包/mysql-connector-java-8.0.26.jar" />
+          <element id="library" level="project" name="commons-codec-1.15" />
+          <element id="library" level="project" name="json-lib-2.1-jdk15" />
+          <element id="library" level="application_server_libraries" name="Tomcat 10.0.10" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar包/JSONOBJECT/commons-beanutils-1.7.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar包/JSONOBJECT/commons-collections-3.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar包/JSONOBJECT/commons-lang-2.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar包/JSONOBJECT/ezmorph-1.0.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar包/JSONOBJECT/commons-logging.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar包/JSONOBJECT/json-lib-2.1-jdk15.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jar包/BASE编码/commons-codec-1.15.jar" />
+          <element id="library" level="project" name="commons-logging" />
+          <element id="library" level="project" name="activation" />
+        </element>
+        <element id="library" level="project" name="mysql-connector-java-8.0.26" />
+        <element id="library" level="project" name="activation" />
       </element>
     </root>
   </artifact>
